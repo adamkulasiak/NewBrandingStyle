@@ -12,7 +12,7 @@ namespace NewBrandingStyle.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View("IndexAsync");
         }
 
         [HttpPost]
