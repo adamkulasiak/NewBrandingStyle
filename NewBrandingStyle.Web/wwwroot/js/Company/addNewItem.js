@@ -9,7 +9,7 @@
 const handleSendForm = async ({ target }) => {
     const name = target.querySelector('#Name').value;
     const description = target.querySelector('#Description').value;
-    const isVisible = JSON.parse(target.querySelector('#IsVisible').value);
+    const isVisible = JSON.parse(target.querySelector('#IsVisible').checked);
     const alert = document.querySelector('#alert');
 
     const requestPayload = {
@@ -26,12 +26,13 @@ const handleSendForm = async ({ target }) => {
         body: JSON.stringify(requestPayload)
     });
 
-    const resJson = await response.json();
-
     if (response.ok) {
         alert.style.display = 'block';
         setTimeout(() => {
             alert.style.display = 'none';
         }, 3000);
+
+        target.reset();
+        loadItems();
     }
 }

@@ -22,6 +22,23 @@
     </div>
 </form>
 
+<div id="itemsWrapper" class="hidden">
+    <h1>Data from db</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">IsVisible</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
 @section Scripts {
     <script src="~/js/Company/addNewItem.js"></script>
+    <script src="~/js/Company//loadItems.js"></script>
 }
